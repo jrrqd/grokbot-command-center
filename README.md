@@ -117,9 +117,9 @@ For nginx or another reverse proxy in front of the UI, **exempt** the ingest pat
 
 ### Vercel (recommended)
 
-After you push to GitHub, deploy with one click (replace `YOUR_ORG`):
+Deploy with one click:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FYOUR_ORG%2Fgrokbot-command-center&project-name=grokbot-command-center&env=NEXT_PUBLIC_CC_DEMO&envDescription=Set%20to%201%20for%20demo%20banner)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fjrrqd%2Fgrokbot-command-center&project-name=grokbot-command-center&env=NEXT_PUBLIC_CC_DEMO&envDescription=Set%20to%201%20for%20demo%20banner)
 
 Add bot ingest secrets in the Vercel project settings. `vercel.json` sets **no-store** cache headers on HTML routes so dashboard state stays fresh.
 
