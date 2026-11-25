@@ -1,0 +1,50 @@
+# Example nginx reverse proxy for Grokbot Command Center on a VPS.
+# Replace server_name, SSL paths, and auth file as needed.
+
+upstream grokbot_command_center {
+    server 127.0.0.1:3000;
+    keepalive 32;
+}
+
+server {
+    listen 443 ssl http2;
+    server_name command.example.com;
+
+  # ssl_certificate     /etc/letsencrypt/live/command.example.com/fullchain.pem;
+  # ssl_certificate_key /etc/letsencrypt/live/command.example.com/privkey.pem;
+
+    # Basic auth for the dashboard (generate: htpasswd -c /etc/nginx/.htpasswd-cc admin)
+    auth_basic "Grokbot Command Center";
+    auth_basic_user_file /etc/nginx/.htpasswd-cc;
+
+    location / {
+        proxy_pass http://grokbot_command_center;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+    }
+
+    # Bot ingest must NOT use browser basic auth — bots send X-Ops-Bot / X-Ops-Bot-Key instead.
+    location = /api/ingest/report {
+        auth_basic off;
+
+        proxy_pass http://grokbot_command_center;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+
+        client_max_body_size 4m;
+    }
+}
+
+server {
+    listen 80;
+    server_name command.example.com;
+    return 301 https://$host$request_uri;
+}

@@ -1,14 +1,18 @@
 {
-  "name": "grokbot-cc-tmp",
+  "name": "grokbot-command-center",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "generate-bot-key": "node scripts/generate-bot-key.mjs"
   },
   "dependencies": {
+    "clsx": "^2.1.1",
+    "framer-motion": "^14.14.0",
+    "lucide-react": "^1.80.0",
     "next": "16.4.6",
     "react": "19.3.0",
     "react-dom": "19.3.0"
@@ -22,5 +26,7 @@
     "eslint-config-next": "16.4.6",
     "tailwindcss": "4.3.3",
     "typescript": "^5"
-  }
+  },
+  "description": "Open-source Grokbot Command Center template — Mission Control for your agent fleet",
+  "license": "MIT"
 }

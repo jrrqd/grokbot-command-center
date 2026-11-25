@@ -1,0 +1,184 @@
+{
+  "brand": "Sample Brand Co.",
+  "updated_at": "2026-11-25T22:00:00+07:00",
+  "note": "Kalender editorial sampel. Hook dan caption fiktif.",
+  "note_en": "Sample editorial calendar. Hooks and captions are fictional.",
+  "sop": {
+    "updated": "2026-11-25",
+    "post_gate": "creative_approved",
+    "plan_gate": "approved",
+    "statuses": [
+      "draft",
+      "awaiting_approval",
+      "needs_feedback",
+      "approved",
+      "creative_review",
+      "creative_changes",
+      "creative_approved",
+      "posted"
+    ],
+    "actions": {
+      "approve": "Plan approved → creative production may start",
+      "respond_with_canva": "From approved/creative_changes → creative_review",
+      "approve_creative": "→ creative_approved (may be posted)",
+      "request_creative_changes": "→ creative_changes (note required)",
+      "post": "Only from creative_approved → posted + https posted_url"
+    },
+    "rules": [
+      "Post only items in creative_approved, then mark posted with a public URL.",
+      "Produce creative only after the plan is approved.",
+      "A chat yes is not enough to publish.",
+      "Do not wake producer and poster in the same step."
+    ]
+  },
+  "actions_done": ["demo-act-01", "demo-act-02"],
+  "actions_rejected": ["demo-rej-01"],
+  "items": [
+    {
+      "id": 1,
+      "title": "Explainer: what is an agent fleet?",
+      "pillar": "Explainer",
+      "planned_date": "2026-11-28",
+      "platform": "ig+x",
+      "format": "carousel",
+      "hook": "One-line hook for slide 1.",
+      "caption": "Fictional caption. No real campaign copy.",
+      "source_url": "https://example.com/source",
+      "relevance_until": "2026-12-10",
+      "status": "draft",
+      "notes": "Draft notes only.",
+      "updated": "2026-11-25T10:00:00+07:00",
+      "feedback": []
+    },
+    {
+      "id": 2,
+      "title": "Launch teaser — command center template",
+      "pillar": "Campaign",
+      "planned_date": "2026-11-29",
+      "platform": "ig+tiktok+x",
+      "format": "carousel",
+      "hook": "Mission control for your bots.",
+      "caption": "Waiting on plan approval.",
+      "source_url": "https://example.com/launch",
+      "status": "awaiting_approval",
+      "notes": "",
+      "updated": "2026-11-25T10:30:00+07:00",
+      "feedback": []
+    },
+    {
+      "id": 3,
+      "title": "Ops hygiene checklist thread",
+      "pillar": "Ops",
+      "planned_date": "2026-11-30",
+      "platform": "x",
+      "format": "thread",
+      "hook": "Five checks before you ship a webhook.",
+      "caption": "Caption pending plan revision.",
+      "status": "needs_feedback",
+      "notes": "",
+      "updated": "2026-11-25T11:00:00+07:00",
+      "feedback": [
+        {
+          "action_id": "demo-fb-01",
+          "action": "request_changes",
+          "note": "Tighten the hook — lead with the risk, not the tool name.",
+          "at": "2026-11-25T11:00:00+07:00"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Approved plan — behind the scenes reel",
+      "pillar": "Explainer",
+      "planned_date": "2026-12-01",
+      "platform": "ig",
+      "format": "reel",
+      "hook": "Plan approved; creative not handed in yet.",
+      "caption": "Fictional caption.",
+      "status": "approved",
+      "notes": "",
+      "updated": "2026-11-25T11:30:00+07:00",
+      "feedback": []
+    },
+    {
+      "id": 5,
+      "title": "Creative in review — org chart canvas",
+      "pillar": "Product",
+      "planned_date": "2026-12-02",
+      "platform": "ig+tiktok",
+      "format": "carousel",
+      "hook": "Drag humans and agents on one canvas.",
+      "caption": "Fictional caption.",
+      "status": "creative_review",
+      "notes": "Canva: https://www.canva.com/design/DEMO-REVIEW/view",
+      "updated": "2026-11-25T12:00:00+07:00",
+      "feedback": [
+        {
+          "action_id": "demo-fb-02",
+          "action": "respond",
+          "note": "Canva: https://www.canva.com/design/DEMO-REVIEW/view",
+          "at": "2026-11-25T12:00:00+07:00"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Creative sent back — KPI strip animation",
+      "pillar": "Campaign",
+      "planned_date": "2026-12-03",
+      "platform": "tiktok",
+      "format": "video",
+      "hook": "Shorter opening needed.",
+      "caption": "Fictional caption.",
+      "status": "creative_changes",
+      "notes": "Canva: https://www.canva.com/design/DEMO-CHANGES/view",
+      "updated": "2026-11-25T12:30:00+07:00",
+      "feedback": [
+        {
+          "action_id": "demo-fb-03",
+          "action": "request_creative_changes",
+          "note": "Shorten second beat; fix typo on end card.",
+          "at": "2026-11-25T12:30:00+07:00"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Creative approved — ship week recap",
+      "pillar": "Explainer",
+      "planned_date": "2026-12-04",
+      "platform": "ig+x",
+      "format": "carousel",
+      "hook": "Approved creative hook.",
+      "caption": "Ready to publish.",
+      "status": "creative_approved",
+      "notes": "Canva: https://www.canva.com/design/DEMO-APPROVED/view",
+      "updated": "2026-11-25T13:00:00+07:00",
+      "feedback": [
+        {
+          "action_id": "demo-fb-04",
+          "action": "approve_creative",
+          "note": "Looks good — may be posted.",
+          "at": "2026-11-25T13:00:00+07:00"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Published — welcome post",
+      "pillar": "Campaign",
+      "planned_date": "2026-11-20",
+      "platform": "ig+tiktok+x",
+      "format": "carousel",
+      "hook": "Already live.",
+      "caption": "Fictional published caption.",
+      "status": "posted",
+      "posted_url": "https://www.instagram.com/p/DEMOPOST/",
+      "source_url": "https://example.com/recap",
+      "relevance_until": "2026-12-01",
+      "notes": "",
+      "updated": "2026-11-25T13:30:00+07:00",
+      "feedback": []
+    }
+  ]
+}

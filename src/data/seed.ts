@@ -1,0 +1,181 @@
+import type { CommandCenterState } from "@/lib/types";
+
+/** Demo seed — may be replaced by the data agent with richer fixtures. */
+export const seedState: CommandCenterState = {
+  updated_at: new Date().toISOString(),
+  lang: "en",
+  theme: "auto",
+  role: "admin",
+  demo: true,
+  tour_done: false,
+  projects: {
+    updated_at: new Date().toISOString(),
+    updated_label: "Today",
+    projects: [
+      {
+        id: 1,
+        project: "Fleet ingest hardening",
+        owner: "Rizki",
+        status: "In progress",
+        next_step: "Rotate webhook keys",
+        deadline: "2026-03-01",
+        updated: new Date().toISOString(),
+        area: "engineering",
+        deadline_warning: true,
+      },
+      {
+        id: 2,
+        project: "Q2 content pillars",
+        owner: "Hal",
+        status: "Waiting",
+        next_step: "Approve pillar brief",
+        deadline: "2026-02-20",
+        updated: new Date().toISOString(),
+        area: "content",
+      },
+      {
+        id: 3,
+        project: "Exec weekly digest",
+        owner: "Lucius",
+        status: "Scheduled",
+        next_step: "Send Sunday preview",
+        deadline: "2026-02-23",
+        updated: new Date().toISOString(),
+        area: "executive",
+      },
+    ],
+  },
+  content: {
+    brand: "Grokbot",
+    updated_at: new Date().toISOString(),
+    items: [
+      {
+        id: 1,
+        title: "Mission control launch thread",
+        pillar: "Product",
+        planned_date: "2026-02-28",
+        platform: "X",
+        format: "Thread",
+        hook: "Your agents deserve a cockpit",
+        caption: "Introducing the Command Center template…",
+        status: "awaiting_approval",
+        notes: "",
+        updated: new Date().toISOString(),
+        feedback: [],
+      },
+      {
+        id: 2,
+        title: "Behind the org canvas",
+        pillar: "Engineering",
+        planned_date: "2026-03-05",
+        platform: "LinkedIn",
+        format: "Carousel",
+        hook: "Humans + agents on one chart",
+        caption: "Draft creative pending…",
+        status: "creative_review",
+        notes: "",
+        updated: new Date().toISOString(),
+        feedback: [],
+      },
+    ],
+  },
+  reports: {
+    updated_at: new Date().toISOString(),
+    reports: [
+      {
+        id: "r1",
+        bot: "lucius",
+        title: "Nightly digest",
+        summary: "3 projects need attention; content pipeline healthy.",
+        status: "info",
+        timestamp: new Date().toISOString(),
+      },
+      {
+        id: "r2",
+        bot: "ichi",
+        title: "Ops scan",
+        summary: "All ingest endpoints 200 OK in the last 24h.",
+        status: "ok",
+        timestamp: new Date().toISOString(),
+      },
+    ],
+  },
+  org: {
+    updated_at: new Date().toISOString(),
+    status: "draft",
+    depts: {
+      ops: {
+        label: "Operations",
+        approver: "Rizki",
+        nodes: [
+          { id: "ceo", label: "CEO", kind: "human", holder: "Rizki", x: 280, y: 40 },
+          { id: "lucius", label: "Lucius", kind: "agent", holder: "Lucius", x: 160, y: 140 },
+          { id: "ichi", label: "Ichi", kind: "agent", holder: "Ichi", x: 400, y: 140 },
+        ],
+        edges: [
+          { from: "ceo", to: "lucius" },
+          { from: "ceo", to: "ichi" },
+        ],
+      },
+    },
+  },
+  sops: {
+    updated_at: new Date().toISOString(),
+    items: [
+      {
+        id: "sop1",
+        dept: "ops",
+        title: "Ingest webhook rotation",
+        summary: "Quarterly key rotation for bot ingest endpoints.",
+        steps: "1. Generate key\n2. Update env\n3. Verify 200 on test payload",
+      },
+    ],
+  },
+  schedules: {
+    updated_at: new Date().toISOString(),
+    items: [
+      {
+        id: "sch1",
+        time: "06:00",
+        days: "Mon–Fri",
+        routine: "Morning ops scan",
+        owner: "Ichi",
+        dept: "ops",
+        status: "active",
+      },
+      {
+        id: "sch2",
+        time: "22:00",
+        days: "Daily",
+        routine: "Nightly digest",
+        owner: "Lucius",
+        dept: "ops",
+        status: "active",
+      },
+    ],
+  },
+  docs: {
+    title: "Command Center handbook",
+    summary: "Operating guide for the Grokbot fleet.",
+    updated_at: new Date().toISOString(),
+    sections: [
+      {
+        id: "intro",
+        heading: "Getting started",
+        blocks: [{ type: "text", text: "Deploy on Vercel, set ingest keys, enable modules in config." }],
+      },
+    ],
+  },
+  inbox: [
+    {
+      id: "in1",
+      type: "agent_feedback",
+      from: "Lucius",
+      subject: "Priority queue",
+      body: "Project #2 waiting on plan approval.",
+      at: new Date().toISOString(),
+      status: "unread",
+      module: "projects",
+    },
+  ],
+};

@@ -1,0 +1,61 @@
+{
+  "updated_at": "2026-11-25T22:00:00+07:00",
+  "updated_label": "25 November 2026, 22:00 WIB",
+  "note": "All times Asia/Jakarta (WIB). Sample routines only — no real bot wake.",
+  "items": [
+    {
+      "id": "sch-01",
+      "time": "07:30",
+      "days": "Mon–Fri",
+      "routine": "Scan ingest error rates; flag bots with >3 warnings in 24h",
+      "owner": "QClaw",
+      "dept": "ops",
+      "status": "Active"
+    },
+    {
+      "id": "sch-02",
+      "time": "08:00",
+      "days": "Mon–Fri",
+      "routine": "Reconcile content statuses vs actions_done drift",
+      "owner": "Lucius",
+      "dept": "content",
+      "status": "Active"
+    },
+    {
+      "id": "sch-03",
+      "time": "09:00",
+      "days": "Mon–Fri",
+      "routine": "Daily ops report POST (ichi)",
+      "owner": "Ichi",
+      "dept": "ops",
+      "status": "Active"
+    },
+    {
+      "id": "sch-04",
+      "time": "10:30",
+      "days": "Tue, Thu",
+      "routine": "Draft carousel from approved plans without creative",
+      "owner": "Hal",
+      "dept": "content",
+      "status": "Active"
+    },
+    {
+      "id": "sch-05",
+      "time": "14:00",
+      "days": "Wed",
+      "routine": "Review project deadline_warnings; ping owners",
+      "owner": "Lucius",
+      "dept": "executive",
+      "status": "Active"
+    },
+    {
+      "id": "sch-06",
+      "time": "20:15",
+      "days": "Daily",
+      "routine": "Nightly fleet triage digest",
+      "owner": "Lucius",
+      "dept": "executive",
+      "status": "Active"
+    }
+  ]
+}

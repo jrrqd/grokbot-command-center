@@ -1,0 +1,57 @@
+[
+  {
+    "id": "rpt-lucius-20261125",
+    "bot": "lucius",
+    "title": "Nightly fleet triage",
+    "summary": "7 projects tracked; 2 deadlines within 72h. Content pipeline: 1 awaiting approval, 1 creative review. No P0 ingest errors.",
+    "status": "info",
+    "timestamp": "2026-11-25T20:15:00+07:00",
+    "received_at": "2026-11-25T20:15:02+07:00"
+  },
+  {
+    "id": "rpt-ichi-20261125",
+    "bot": "ichi",
+    "title": "Daily ops scan",
+    "summary": "All staging health checks green. Webhook forward latency p95 420ms. One deferred cert renewal reminder.",
+    "status": "ok",
+    "timestamp": "2026-11-25T10:15:00+07:00",
+    "received_at": "2026-11-25T10:15:01+07:00",
+    "link": "https://example.com/ops/runbook"
+  },
+  {
+    "id": "rpt-hal-20261125",
+    "bot": "hal",
+    "title": "Creative hand-off blocked",
+    "summary": "Item #4 approved but Canva slot not assigned. Waiting for operator to attach draft URL before creative_review.",
+    "status": "warning",
+    "timestamp": "2026-11-25T14:00:00+07:00",
+    "received_at": "2026-11-25T14:00:03+07:00"
+  },
+  {
+    "id": "rpt-qclaw-20261125",
+    "bot": "qclaw",
+    "title": "Workstation heartbeat",
+    "summary": "Ingest key rotation due in 6 days. Last successful POST 09:55 WIB. Disk usage 61% on build volume.",
+    "status": "info",
+    "timestamp": "2026-11-25T09:55:00+07:00",
+    "received_at": "2026-11-25T09:55:01+07:00"
+  },
+  {
+    "id": "rpt-ichi-20261124",
+    "bot": "ichi",
+    "title": "Anomaly: retry spike",
+    "summary": "Webhook forward returned 502 three times between 18:10–18:12 WIB. All content_action applies succeeded; forwards recovered.",
+    "status": "warning",
+    "timestamp": "2026-11-24T18:20:00+07:00",
+    "received_at": "2026-11-24T18:20:01+07:00"
+  },
+  {
+    "id": "rpt-qclaw-20261123",
+    "bot": "qclaw",
+    "title": "Ingest auth failure (test)",
+    "summary": "Rejected POST with mismatched X-Ops-Bot header during dry-run. No production impact.",
+    "status": "error",
+    "timestamp": "2026-11-23T16:30:00+07:00",
+    "received_at": "2026-11-23T16:30:02+07:00"
+  }
+]

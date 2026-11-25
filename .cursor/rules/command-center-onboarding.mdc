@@ -1,0 +1,18 @@
+---
+description: Mandate grill-me onboarding when the Command Center template is not customized
+alwaysApply: true
+---
+
+# Command Center onboarding
+
+When this workspace opens, when the user asks to customize, set up, brand, or configure the command center, or before substantial feature work on this template:
+
+1. Read `src/config/command-center.config.ts`.
+2. If `customized` is `false` or branding still matches the default template, **do not skip to implementation**. Run the **grill-me** interview:
+   - One to two focused questions at a time.
+   - Use decision trees in root `AGENTS.md`.
+   - Execute the full workflow in `.cursor/skills/customize-command-center/SKILL.md`.
+3. Present a configuration blueprint and wait for user confirmation before editing config, seed data, or env files.
+4. Never commit secrets; use sample data only; confirm before any live deployment change.
+
+If `customized: true`, proceed with the user’s task unless they explicitly ask to re-onboard.

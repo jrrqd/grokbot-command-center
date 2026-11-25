@@ -1,0 +1,118 @@
+{
+  "updated_at": "2026-11-25T22:00:00+07:00",
+  "status": "draft",
+  "source": "templates/sample-org",
+  "depts": {
+    "engineering": {
+      "label": "Engineering",
+      "approver": "Alex Morgan",
+      "nodes": [
+        {
+          "id": "eng-approver",
+          "label": "Engineering lead",
+          "kind": "human",
+          "holder": "Alex Morgan",
+          "x": 280,
+          "y": 40
+        },
+        {
+          "id": "eng-cos",
+          "label": "CoS Engineering",
+          "kind": "agent",
+          "holder": "Lucius (eng scope)",
+          "x": 280,
+          "y": 140
+        },
+        {
+          "id": "eng-builder",
+          "label": "Builder bot",
+          "kind": "agent",
+          "holder": "Ichi",
+          "x": 120,
+          "y": 260
+        },
+        {
+          "id": "eng-monitor",
+          "label": "Infra monitor",
+          "kind": "agent",
+          "holder": "QClaw",
+          "x": 440,
+          "y": 260
+        }
+      ],
+      "edges": [
+        { "from": "eng-approver", "to": "eng-cos" },
+        { "from": "eng-cos", "to": "eng-builder" },
+        { "from": "eng-cos", "to": "eng-monitor" }
+      ]
+    },
+    "content": {
+      "label": "Content studio",
+      "approver": "Blair Kim",
+      "nodes": [
+        {
+          "id": "cnt-approver",
+          "label": "Content lead",
+          "kind": "human",
+          "holder": "Blair Kim",
+          "x": 280,
+          "y": 40
+        },
+        {
+          "id": "cnt-cos",
+          "label": "CoS Content",
+          "kind": "agent",
+          "holder": "Lucius (content scope)",
+          "x": 280,
+          "y": 140
+        },
+        {
+          "id": "cnt-producer",
+          "label": "Producer",
+          "kind": "agent",
+          "holder": "Hal",
+          "x": 200,
+          "y": 260
+        }
+      ],
+      "edges": [
+        { "from": "cnt-approver", "to": "cnt-cos" },
+        { "from": "cnt-cos", "to": "cnt-producer" }
+      ]
+    },
+    "ops": {
+      "label": "Operations",
+      "approver": "Casey Ortiz",
+      "nodes": [
+        {
+          "id": "ops-approver",
+          "label": "Ops lead",
+          "kind": "human",
+          "holder": "Casey Ortiz",
+          "x": 280,
+          "y": 40
+        },
+        {
+          "id": "ops-cos",
+          "label": "CoS Ops",
+          "kind": "agent",
+          "holder": "Lucius (ops scope)",
+          "x": 280,
+          "y": 140
+        },
+        {
+          "id": "ops-reporter",
+          "label": "Daily reporter",
+          "kind": "agent",
+          "holder": "Ichi",
+          "x": 280,
+          "y": 260
+        }
+      ],
+      "edges": [
+        { "from": "ops-approver", "to": "ops-cos" },
+        { "from": "ops-cos", "to": "ops-reporter" }
+      ]
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "updated_at": "2026-11-25T22:00:00+07:00",
+  "status": "draft",
+  "items": [
+    {
+      "id": "sop-ingest",
+      "dept": "ops",
+      "title": "Bot report ingest",
+      "source_path": "docs/sop/bot-ingest.md",
+      "summary": "Agents POST JSON reports with bot headers. Keys are hashed server-side; never commit plaintext.",
+      "steps": "Register bot in bot-keys.json; rotate via systemd; validate body limits; surface in reports tab only."
+    },
+    {
+      "id": "sop-content-gates",
+      "dept": "content",
+      "title": "Two-gate content pipeline",
+      "source_path": "docs/sop/content-pipeline.md",
+      "summary": "Plan approval before creative. Post gate is creative_approved only.",
+      "steps": "Use content_action verbs; append feedback; reload after apply; block direct posted edits."
+    },
+    {
+      "id": "sop-org-draft",
+      "dept": "engineering",
+      "title": "Org canvas draft mode",
+      "source_path": "docs/sop/org-canvas.md",
+      "summary": "Org changes stay draft until a human publishes. CoS may propose nodes, not approve.",
+      "steps": "Save positions; validate acyclic edges; export JSON to data/org.json on publish."
+    },
+    {
+      "id": "sop-webhook",
+      "dept": "ops",
+      "title": "Webhook forward",
+      "source_path": "docs/sop/webhook-forward.md",
+      "summary": "Forward after successful apply for content_action. Failed forward does not roll back.",
+      "steps": "Bearer + X-Automation-Key; 8s timeout; log forward_status separately from applied."
+    },
+    {
+      "id": "sop-demo",
+      "dept": "all",
+      "title": "Demo mode",
+      "source_path": "docs/sop/demo-mode.md",
+      "summary": "Browser-local overlay for Vercel previews. Does not wake real bots.",
+      "steps": "Load seed.ts; persist patra-style store key; show banner; disable destructive POSTs."
+    }
+  ]
+}

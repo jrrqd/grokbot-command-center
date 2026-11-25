@@ -1,0 +1,73 @@
+{
+  "title": "Command Center · Sample handbook",
+  "summary": "Fictional documentation exercising every docs block type. Replace in production.",
+  "summary_en": "Fictional documentation exercising every docs block type. Replace in production.",
+  "updated_at": "2026-11-25T22:00:00+07:00",
+  "updated_label": "25 November 2026, 22:00 WIB",
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "Ikhtisar",
+      "heading_en": "Overview",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Panduan sampel untuk tab Dokumen dan onboarding agen.",
+          "text_en": "Sample handbook for the Docs tab and agent onboarding."
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "lead": "Demo",
+          "lead_en": "Demo",
+          "text": "Ganti docs.json saat deploy produksi.",
+          "text_en": "Replace docs.json when deploying to production."
+        }
+      ]
+    },
+    {
+      "id": "bots",
+      "heading": "Armada bot",
+      "heading_en": "Bot fleet",
+      "blocks": [
+        {
+          "type": "table",
+          "cards": true,
+          "columns": ["Bot", "Peran", "Ingest", "Routine"],
+          "columns_en": ["Bot", "Role", "Ingest", "Routine"],
+          "rows": [
+            ["Lucius", "Chief of Staff", "Ya", "20:15 triage"],
+            ["Ichi", "Ops reporter", "Ya", "10:15 daily"],
+            ["Hal", "Content producer", "Tidak", "On demand"],
+            ["QClaw", "Monitor", "Ya", "09:55 heartbeat"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ingest",
+      "heading": "Skema ingest",
+      "heading_en": "Ingest schema",
+      "blocks": [
+        {
+          "type": "code",
+          "lang": "json",
+          "text": "{\"bot\":\"ichi\",\"title\":\"≤200\",\"summary\":\"≤8000\",\"status\":\"ok|info|warning|error\",\"timestamp\":\"ISO-8601\",\"link\":\"https://...\"}"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Header: Content-Type application/json",
+            "Header: X-Ops-Bot dan X-Ops-Bot-Key",
+            "Body bot harus cocok dengan header"
+          ],
+          "items_en": [
+            "Header: Content-Type application/json",
+            "Header: X-Ops-Bot and X-Ops-Bot-Key",
+            "Body bot must match header"
+          ]
+        }
+      ]
+    }
+  ]
+}

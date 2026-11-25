@@ -1,0 +1,79 @@
+{
+  "updated_at": "2026-11-25T22:00:00+07:00",
+  "updated_label": "25 November 2026, 22:00 WIB",
+  "note": "Data sampel saja. Proyek fiktif untuk pratinjau lokal — bukan papan live.",
+  "note_en": "Sample data only. Fictional projects for local preview — not the live board.",
+  "projects": [
+    {
+      "id": 1,
+      "project": "Agent SDK rollout",
+      "owner": "Riley",
+      "status": "In progress",
+      "next_step": "Merge auth middleware PR and update ingest docs.",
+      "deadline": "28 Nov 2026",
+      "updated": "25 Nov, 14:00",
+      "area": "engineering",
+      "deadline_warning": true
+    },
+    {
+      "id": 2,
+      "project": "Weekly content pillar audit",
+      "owner": "Sam / Jordan",
+      "status": "Monitoring",
+      "next_step": "Hal delivers carousel draft for creative review.",
+      "deadline": "—",
+      "updated": "25 Nov, 11:30",
+      "area": "content"
+    },
+    {
+      "id": 3,
+      "project": "Fleet heartbeat dashboard",
+      "owner": "Taylor",
+      "status": "Waiting on vendor",
+      "next_step": "Confirm staging TLS cert path.",
+      "deadline": "30 Nov 2026",
+      "updated": "24 Nov, 16:45",
+      "area": "ops"
+    },
+    {
+      "id": 4,
+      "project": "Q4 executive digest",
+      "owner": "Riley",
+      "status": "Awaiting review",
+      "next_step": "Lucius compiles KPI narrative for approver.",
+      "deadline": "1 Dec 2026",
+      "updated": "25 Nov, 09:00",
+      "area": "executive"
+    },
+    {
+      "id": 5,
+      "project": "Home lab Grokbot wiring",
+      "owner": "Jordan",
+      "status": "Paused",
+      "next_step": "Resume after router firmware update.",
+      "deadline": "When ready",
+      "updated": "22 Nov",
+      "area": "personal"
+    },
+    {
+      "id": 6,
+      "project": "Webhook forward hardening",
+      "owner": "Sam",
+      "status": "Running",
+      "next_step": "Add integration test for content_action apply-first path.",
+      "deadline": "27 Nov 2026",
+      "updated": "25 Nov, 08:15",
+      "area": "engineering"
+    },
+    {
+      "id": 7,
+      "project": "Social post queue cleanup",
+      "owner": "Taylor",
+      "status": "Unverified",
+      "next_step": "Validate platform tokens in vault.",
+      "deadline": "ASAP",
+      "updated": "23 Nov",
+      "area": "content"
+    }
+  ]
+}
